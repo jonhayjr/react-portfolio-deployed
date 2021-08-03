@@ -1,0 +1,7 @@
+.background-image-orange {
+    background-image: linear-gradient(to bottom, rgba(246, 245, 252, 0.247), rgba(117, 19, 93, 0.055)), url("../img/sbimage.jpeg");
+}
+
+.background-image-purple {
+    background-image: linear-gradient(to bottom, rgba(246, 245, 252, 0.247), rgba(117, 19, 93, 0.73)), url("../img/sbimage.jpeg");
+}

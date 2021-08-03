@@ -1,0 +1,45 @@
+{ "projects":  [
+    {
+        "name" : "Online Responsive Form",
+        "number" : 3,
+        "description" : "This project was created using a mobile-first approach.  It uses a variety of HTML form input types and attributes along with focus states on the input fields to make the page more accessible.",
+        "skills" : "HTML, CSS",
+        "image": "Project3NewResize.png"
+    },
+    {
+        "name" : "Web Style Guide",
+        "number" : 4,
+        "description" : "This project is a web style guide that was created using Sass.  I converted an existing CSS files into multiple Sass partial files.  This web style guide can be used to quickly create new websites.",
+        "skills" : "HTML, CSS, Sass",
+        "image": "Project4NewResize.png"
+    },
+    {
+        "name" : "Interactive Photo Gallery",
+        "number" : 5,
+        "description" : "This project is an interactive photo gallery that was created using CSS Grid with a responsive layout for various screen sizes.  It utilizes the lightbox plugin and custom JavaScript that allows users to search for photos based on their caption text.",
+        "skills" : "HTML, CSS, JavaScript",
+        "image": "Project5NewResize.png"
+    },
+    {
+        "name" : "Game Show App",
+        "number" : 6,
+        "description" : "This project is a Wheel of Success word guessing game that I created using custom JavaScript logic.  Each player gets 5 tries to guess a random phrase by clicking letters on an onscreen keyboard.",
+        "skills" : "HTML, CSS, JavaScript",
+        "image": "Project6NewResize.png"
+    },
+    {
+        "name" : "Web Dashboard",
+        "number" : 7,
+        "description" : "This project is a fully-loaded web app dashboard that I created using HTML, CSS, JavaScript and SVG graphics.  It uses JavaScript-driven graphs and charts and includes a search field with autocomplete functionality.  I also implemented local storage that allows users to store their custom settings.",
+        "skills" : "HTML, CSS, JavaScript, SVG",
+        "image": "Project7NewResize.png"
+    },
+    {
+        "name" : "Employee Directory",
+        "number" : 8,
+        "description" : "This project uses the Random User Generator API to pull information for 12 random employees.  It then populates that data in an employee directory.  Each employee has a photo along with different pieces of personal information such as their email, address and birthday.",
+        "skills" : "HTML, CSS, JavaScript, API",
+        "image": "Project8NewResize.png"
+    }
+]
+}

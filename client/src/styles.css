@@ -1,0 +1,339 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+hr {
+    background-color: white;
+    height: 1px;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+/* ================================= 
+    Base Layout Styles
+==================================== */
+/*Header*/
+.header-text {
+    font-size: 40px;
+}
+
+.header-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-radius {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.line-height {
+    line-height: 2;
+}
+
+/*Projects*/
+.custom-select {
+    background-color: white;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 300px;
+}
+
+#projects 
+.card {
+    cursor: pointer;
+}
+
+.card img {
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.card .btn-secondary,
+.card .btn-dark {
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .btn-secondary:hover {
+    color: #6c757d;
+    background-color: white;
+    border: 2px solid #6c757d;
+}
+
+.card .btn-dark:hover {
+    color: #343a40;
+    background-color: white;
+    border: 2px solid #343a40;
+}
+
+.project-skills li {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid black;
+}
+
+.project-skills li:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/*Skills*/
+.skills-used {
+    font-size: 12px;
+}
+
+.list-item-html5 {
+    background-color: #e34f26;
+    color: white;
+}
+
+.list-item-html5-inverted {
+    background-color: white;
+    color: #e34f26;
+    cursor: pointer;
+}
+
+.list-item-css3 {
+    background-color: #2759AE;
+    color: white;
+}
+
+.list-item-css3-inverted {
+    color: #2759AE;
+    background-color: white;
+    cursor: pointer;
+}
+
+.list-item-javascript {
+    background-color: #f7df1e;
+    color: black;
+}
+
+.list-item-javascript-inverted {
+    color: #f7df1e;
+    background-color: black;
+    cursor: pointer;
+}
+
+.list-item-sass {
+    color: #CD6799;
+}
+
+.list-item-sass-inverted {
+    background-color: #CD6799;
+    color: white;
+    cursor: pointer;
+}
+
+.list-item-sql {
+    background-color: #CFD8DC;
+    color: #B71C1C;
+}
+
+.list-item-sql-inverted {
+    color: #CFD8DC;
+    background-color: #B71C1C;
+    cursor: pointer;
+}
+
+.list-item-github {
+    background-color: #333;
+    color: white;
+}
+
+.list-item-github-inverted {
+    color: #333;
+    background-color: white;
+    cursor: pointer;
+}
+
+.list-item-git {
+    color: #F34F29;
+}
+
+.list-item-git-inverted {
+    background-color: #F34F29;
+    color: white;
+    cursor: pointer;
+}
+
+.list-item-bootstrap {
+    color: white;
+    background-color: #563d7c;
+}
+
+.list-item-bootstrap-inverted {
+    background-color: white;
+    color: #563d7c;
+    cursor: pointer;
+}
+
+.skills .list-group-item {
+    border-radius: 15px 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*Contact*/
+.contact svg {
+    height: 50px;
+    width: 50px;
+}
+
+.email {
+    fill: rgba(255, 255, 255, 0.753);
+}
+
+.linkedin {
+    fill: #2867B2;
+}
+
+.github {
+    fill: #333;
+}
+
+a > svg {
+    transition: all 0.3s ease-in-out;
+}
+
+a > svg:hover {
+    transform: scale(1.5);
+    opacity: 0.75;
+}
+
+/*Project Modal*/
+.overlay {
+    position: absolute;
+    top: 1000px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    max-height: 400px;
+}
+
+.modalElement {
+    width: 450px;
+    position: relative;
+    margin: 15% auto auto;
+    text-align: center;
+    background: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 30px 20px;
+    box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
+    }
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    }
+
+    .controls {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+    
+    .previous,
+    .next {
+        padding: 0.3rem;
+        width: 100px;
+        color: black;
+        border-radius: 5px 5px;
+        background-color: lightgray;
+        border: solid 2px black;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .previous:hover,
+    .next:hover {
+        background-color: black;
+        color: lightgray;
+        border: solid 2px black;
+        cursor: pointer;
+    }
+
+/* Error*/
+.error {
+    color: red;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.error p {
+    padding-bottom: 1rem;
+}
+
+/* ================================= 
+    Media Queries
+==================================== */
+@media (min-width: 768px) {
+/*Projects*/
+
+ #projects .card img {
+       width: 350px;
+       width: 100%;
+       height: 250px;
+}
+/*Skills*/
+    .skills-used {
+        font-size: 15px;
+    }
+}
+
+/* Modal */
+.overlay {
+    top: 15px;
+}
+.modal-close {
+    padding-top: 0.5rem;
+    right: 25px;
+}
+
+.modalElement .card {
+    height: 300px;
+}
+
+.modalElement {
+    width: 375px;
+}
+
+/*Error*/
+.error {
+    width: 750px;
+    font-size: 18px;
+}
+
+
+@media (min-width: 1024px) {
+/*Skills*/
+.skills-used {
+    font-size: 14px;
+}
+/*Overlay*/
+.overlay {
+    top: 25px;
+}
+
+/*Error*/
+.error {
+    width: 1000px;
+    font-size: 20px;
+}
+}
