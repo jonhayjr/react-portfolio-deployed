@@ -9,45 +9,36 @@ import Project from '../Project/Project';
 
 const Projects = () => {
 
-//Set state
-  const [skill, setSkill] = useState('All');
+  //Set state
+  const [skill, setSkill] = useState(localStorage.getItem('skill') ? localStorage.getItem('skill') : 'All');
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+
     //Set isLoading to true
     setIsLoading(true);
+
+    //Set URL based on skill value
+    const url = skill === 'All' ? `${config.apiBaseUrl}/projects` : `${config.apiBaseUrl}/projects/${skill}`
+
     //Get data from projects api
-    axios.get(`${config.apiBaseUrl}/projects`)
+    axios.get(url)
     .then(res => {
-        setData(res.data.data);
-        console.log(res.data.data);
+        setData(res.data);
         setIsLoading(false);
     })
-  }, []);
+  }, [skill]);
 
-    //Filter data by skill and update data state
-    const filterBySkill = (skill) => {
-        //If skill is All, use projects api.  If skill is not All, use projects/:skill api
-        const apiUrl = skill ==='All' ? `${config.apiBaseUrl}/projects` : `${config.apiBaseUrl}/projects/${skill}`;
-    
-        //Get project by skill from skills api
-        axios.get(`${apiUrl}`)
-        .then(res => {
-            setData(res.data.data);
-        })
-      }
-    
-      //Function that handle change to skill that is selected
-      const handleSkillChange = (skill) => {
-        setSkill(skill);
-        filterBySkill(skill);
-      }
-
-
+   
     const handleChange = (e) => {
-        handleSkillChange(e.target.value);
+        //Set state for skill
+        setSkill(e.target.value);
+
+        //Set skill value in local storage
+        localStorage.setItem('skill', e.target.value);
     }
+
     return (
         <div>
             <section className="p-3 p-lg-4" id="projects">
@@ -55,16 +46,18 @@ const Projects = () => {
                     <div className="row text-center">
                         <div className="col">
                             <h5 className="display-4 text-white mb-4">Projects</h5>
-                            <select className="form-select-lg form-select-sm my-3 custom-select" aria-label="default select example" onChange={handleChange} value={skill}>
+                            <form className="mb-4">
+                                <select className="form-select-lg form-select-sm my-3 custom-select" aria-label="default select example" onChange={handleChange} value={skill}>
                                 <option disabled value="none">Filter by skill</option>
-                                <option value="All">All</option>
-                                <option value="HTML">HTML</option>
-                                <option value="CSS">CSS</option>
-                                <option value="JavaScript">JavaScript</option>
-                                <option value="Sass">Sass</option>
-                                <option value="API">API</option>
-                                <option value="SVG">SVG</option>
-                            </select>
+                                    <option value="All">All</option>
+                                    <option value="HTML">HTML</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="Sass">Sass</option>
+                                    <option value="API">API</option>
+                                    <option value="SVG">SVG</option>
+                                </select>
+                            </form>
                         </div>
                     </div>
                 </div>

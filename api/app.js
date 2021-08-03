@@ -4,7 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
-const port = Number(process.env.PORT || 5000);
+const { sequelize } = require('./models');
+
 
 var projectsRouter = require('./routes/projects');
 
@@ -43,9 +44,24 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// starting the server
-app.listen(port, () =>
-    console.log(`🚀 Server running on port ${port}!`));
+app.set('port', process.env.PORT || 5000);
 
+// Test the database connection.
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Database connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+})();
+
+// Sequelize model synchronization, then start listening on our port.
+sequelize.sync()
+  .then( () => {
+    const server = app.listen(app.get('port'), () => {
+      console.log(`Express server is listening on port ${server.address().port}`);
+    });
+  });
 
 module.exports = app;

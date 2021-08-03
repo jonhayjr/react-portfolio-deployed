@@ -1,54 +1,32 @@
 var express = require('express');
 var router = express.Router();
-const mysql = require("mysql2");
-const dbConfig = require("../config/db.config.js");
+const {Project} = require('../models');
+const {Op} = require('sequelize');
 
-// Create a connection to the database
-const connection = mysql.createConnection({
-  host: dbConfig.HOST,
-  user: dbConfig.USER,
-  password: dbConfig.PASSWORD,
-  database: dbConfig.DB
-});
+//Imports asyncHandler middleware function
+const { asyncHandler } = require('../middleware/async-handler');
 
-// open the MySQL connection
-connection.connect(error => {
-  if (error) {
-    throw error;
-  }
-
-  console.log("Successfully connected to the database.");
-});
-
-
-/* GET projects. */
-router.get('/projects', (req, res, next) => {
-  let sql = `Select * from projects`;
-  connection.query(sql, (err, data, fields) => {
-      if (err) throw err;
-
-      res.status(200).json({
-        data
-      })
+// Route that returns all projects
+router.get('/projects', asyncHandler(async (req, res) => {
+  const projects = await Project.findAll({
   });
 
-});
+  res.json(projects);
+}));
 
-/* GET projects by skill. */
-router.get('/projects/:skill', (req, res, next) => {
-  //Get skill from parameters and surround with wildcards
-  const skill = `%${req.params.skill}%`;
-  let sql = `Select * from projects where skills like ?`;
-
-  //Query DB for project with skill
-  connection.query(sql, [skill], (err, data, fields) => {
-      if (err) throw err;
-      res.status(200).json({
-        data
-      })
+// Route that returns project for a specific skill
+router.get('/projects/:skill', asyncHandler(async (req, res) => {
+  const {skill} = req.params;
+  const project = await Project.findAll({
+    where: {
+      skills: {
+        [Op.like]: `%${skill}%`
+      }
+    }
   });
+  res.json(project);
+}));
 
-});
 
 
 module.exports = router;
