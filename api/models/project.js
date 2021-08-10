@@ -21,10 +21,6 @@ module.exports = (sequelize) => {
         }
       }
     },
-    number: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    },
     description: {
       type: Sequelize.TEXT,
       allowNull: false,
@@ -61,6 +57,14 @@ module.exports = (sequelize) => {
           }
         }
       },
+      github: {
+        type: Sequelize.TEXT,
+        allowNull: false
+    },
+    livepreview: {
+      type: Sequelize.TEXT,
+      allowNull: false
+  },
   }, { sequelize });
 
   return Project;

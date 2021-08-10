@@ -174,6 +174,28 @@ hr {
     cursor: pointer;
 }
 
+.list-item-react {
+    background-color: #61DBFB;
+    color: white;
+    cursor: pointer;
+}
+
+.list-item-node {
+    background-color: #3C873A;
+    color: #303030;
+    cursor: pointer;
+    outline: #68A063;
+}
+
+.list-item-express {
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+    outline: black;
+}
+
+
+
 .skills .list-group-item {
     border-radius: 15px 15px;
     max-width: 600px;

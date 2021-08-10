@@ -55,7 +55,13 @@ const Projects = () => {
                                     <option value="JavaScript">JavaScript</option>
                                     <option value="Sass">Sass</option>
                                     <option value="API">API</option>
-                                    <option value="SVG">SVG</option>
+                                    <option value="Bootstrap">Bootstrap</option>
+                                    <option value="React">React</option>
+                                    <option value="Node">Node</option>
+                                    <option value="Express">Express</option>
+                                    <option value="Pug">Pug</option>
+                                    <option value="Sequelize">Sequelize</option>
+                                    <option value="SQL">SQL</option>
                                 </select>
                             </form>
                         </div>

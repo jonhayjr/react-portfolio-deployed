@@ -19,6 +19,9 @@ const Skills = () => {
                         <li className="list-group-item list-item-github font-weight-bold mb-2 w-75 mx-auto">Github</li>
                         <li className="list-group-item list-item-git font-weight-bold mb-2 w-75 mx-auto">Git</li>
                         <li className="list-group-item list-item-bootstrap font-weight-bold mb-2 w-75 mx-auto">Bootstrap</li>
+                        <li className="list-group-item list-item-react font-weight-bold mb-2 w-75 mx-auto">React</li>
+                        <li className="list-group-item list-item-node font-weight-bold mb-2 w-75 mx-auto">Node</li>
+                        <li className="list-group-item list-item-express font-weight-bold mb-2 w-75 mx-auto">Express</li>
                         <li className="list-group-item list-item-sql font-weight-bold mb-2 w-75 mx-auto">SQL</li>
                     </ul>
                     </div>

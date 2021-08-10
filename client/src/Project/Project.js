@@ -13,8 +13,8 @@ const Project = ({projects}) => {
                         <h5 className="card-title">{project.name}</h5>
                         <p className="card-text">{project.description}</p>
                         <p className="skills-used mt-auto card-text"><span className="font-weight-bold">Skills Used:</span> {project.skills}</p>
-                        <a href={`https://github.com/jonhayjr/Treehouse-FEWD-Project${project.number}`} className="btn btn-secondary mb-4" target="_blank" rel="noopener noreferrer">View Code</a>
-                        <a href={`https://jonhayjr.com/Treehouse-FEWD-Project${project.number}/`} className="btn btn-dark" target="_blank" rel="noopener noreferrer">Go to Website</a>
+                        <a href={project.github} className="btn btn-secondary mb-4" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href={project.livepreview} className="btn btn-dark" target="_blank" rel="noopener noreferrer">Go to Website</a>
                     </div> 
                 </div>
             </div>

@@ -1,4 +1,3 @@
-//Import image
 const About = () => {
     return (
         <div>
@@ -7,8 +6,8 @@ const About = () => {
                     <div className="row text-white text-center">
                     <div className="col">
                         <h5 className="display-4">About</h5>
-                        <img src={`${process.env.PUBLIC_URL}/img/JonHeadshot.jpeg`} className="img-fluid img-radius my-3" alt="Jon Headshot"/>
-                        <p className="lead line-height">I took my first programming class in high school, and since then, I have had an interest in programming.  In September 2020, I decided to make learning to code a priority by setting aside an "hour of learning" each day.  In January 2021, I decided to take my learning journey to the next level and enrolled in the Front End Development Techdegree Program with Treehouse.</p>
+                        <img src={`${process.env.PUBLIC_URL}/img/JonHeadShot.jpeg`} className="img-fluid img-radius my-3" alt="Jon Headshot"/>
+                        <p className="lead line-height">My passion for programming began after I took my first programming class in high school.  In January 2021, I decided to take this passion to the next level and enrolled in the Front End Development Techdegree Program with Team Treehouse.  After completing this Techdegree, I still wanted to learn more and decided to pursue the Full Stack JavaScript Techdegree which I completed in July 2021.  In my free time, you can find me learning new programming technologies or building cool projects.  You can check out some of those projects below.</p>
                     </div>
                     </div>
                 </div>

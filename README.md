@@ -2,7 +2,7 @@
 
 This alternate version of the portfolio project that I created for my FEWD Techdegree with Team Treehouse.  I rebuilt this app using React.
 
-Click [`here`](https://jh-react-portfolio.netlify.app/) for a live preview.
+Click [`here`](https://www.jonhayjr.com/) for a live preview.
 
 ## Available Scripts
 

@@ -30,7 +30,7 @@ const Header = () => {
             <div className="row text-white text-center">
                 <div className="col">
                     {!hover && <p id="header-text-1" className="header-text">My name is Jon</p>}
-                    { hover && <p id="header-text-2" className="header-text">And I'm a web-developer from Santa Barbara.</p>}
+                    { hover && <p id="header-text-2" className="header-text">And I'm a full stack developer from Santa Barbara.</p>}
                 </div>
             </div>
             </div>
