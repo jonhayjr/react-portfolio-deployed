@@ -177,23 +177,39 @@ hr {
 .list-item-react {
     background-color: #61DBFB;
     color: white;
+}
+
+.list-item-react-inverted {
+    background-color: white;
+    color: #61DBFB;
     cursor: pointer;
 }
 
 .list-item-node {
     background-color: #3C873A;
     color: #303030;
-    cursor: pointer;
     outline: #68A063;
+}
+
+.list-item-node-inverted {
+    background-color: #303030;
+    color: #3C873A;
+    cursor: pointer;
+    outline: #303030;
 }
 
 .list-item-express {
     background-color: lightgray;
     color: black;
-    cursor: pointer;
     outline: black;
 }
 
+.list-item-express-inverted {
+    background-color: black;
+    color: lightgray;
+    cursor: pointer;
+    outline: lightgray;
+}
 
 
 .skills .list-group-item {
