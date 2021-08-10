@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React Portfolio Site
 
 This alternate version of the portfolio project that I created for my FEWD Techdegree with Team Treehouse.  I rebuilt this app using React.
 
